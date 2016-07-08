@@ -29,9 +29,16 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnPushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KNf-BU-ecg"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyn-9d-he7" customClass="PushButtonView" customModule="Flo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyn-9d-he7" customClass="PushButtonView" customModule="Flo" customModuleProvider="target">
                                 <rect key="frame" x="275" y="480" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="1Ix-ag-oxL"/>
+                                    <constraint firstAttribute="height" constant="50" id="CQ3-ki-mad"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
@@ -39,17 +46,40 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kaU-Cd-OgE" customClass="CounterView" customModule="Flo" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kaU-Cd-OgE" customClass="CounterView" customModule="Flo" customModuleProvider="target">
                                 <rect key="frame" x="185" y="70" width="230" height="230"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxc-yO-kW9">
+                                        <rect key="frame" x="93" y="93" width="44" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="counterColor">
+                                        <color key="value" red="0.3411764705882353" green="0.85490196078431369" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
+                                        <color key="value" red="0.13333333333333333" green="0.43137254901960786" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Kyn-9d-he7" firstAttribute="top" secondItem="SLU-sc-ZEi" secondAttribute="bottom" constant="30" id="AYq-v6-jFD"/>
                             <constraint firstItem="SLU-sc-ZEi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="E9P-gE-aSA"/>
+                            <constraint firstItem="Kyn-9d-he7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cuh-Gy-Mi5"/>
+                            <constraint firstItem="kaU-Cd-OgE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dyQ-3i-PAx"/>
                             <constraint firstItem="SLU-sc-ZEi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iTH-RJ-iE4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="mxc-yO-kW9" id="3CR-mc-FJE"/>
+                        <outlet property="counterView" destination="kaU-Cd-OgE" id="6HL-hH-mnB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

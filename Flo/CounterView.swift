@@ -13,7 +13,14 @@ let π:CGFloat = CGFloat(M_PI)
 
 @IBDesignable class CounterView: UIView {
     
-    @IBInspectable var counter: Int = 5
+    @IBInspectable var counter: Int = 5 {
+        didSet {
+            if counter <=  NoOfGlasses {
+                //the view needs to be refreshed
+                setNeedsDisplay()
+            }
+        }
+    }
     @IBInspectable var outlineColor: UIColor = UIColor.blueColor()
     @IBInspectable var counterColor: UIColor = UIColor.orangeColor()
     
@@ -44,5 +51,57 @@ let π:CGFloat = CGFloat(M_PI)
         counterColor.setStroke()
         path.stroke()
         
+        //Draw the outline
+        
+        //1 - first calculate the difference between the two angles
+        //ensuring it is positive
+        let angleDifference: CGFloat = 2 * π - startAngle + endAngle
+        
+        //then calculate the arc for each single glass
+        let arcLengthPerGlass = angleDifference / CGFloat(NoOfGlasses)
+        
+        //then multiply out by the actual glasses drunk
+        let outlineEndAngle = arcLengthPerGlass * CGFloat(counter) + startAngle
+        
+        //2 - draw the outer arc
+        var outlinePath = UIBezierPath(arcCenter: center,
+                                       radius: bounds.width/2 - 2.5,
+                                       startAngle: startAngle,
+                                       endAngle: outlineEndAngle,
+                                       clockwise: true)
+        
+        //3 - draw the inner arc
+        outlinePath.addArcWithCenter(center,
+                                     radius: bounds.width/2 - arcWidth + 2.5,
+                                     startAngle: outlineEndAngle,
+                                     endAngle: startAngle,
+                                     clockwise: false)
+        
+        //4 - close the path
+        outlinePath.closePath()
+        
+        outlineColor.setStroke()
+        outlinePath.lineWidth = 5.0
+        outlinePath.stroke()
+        
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
