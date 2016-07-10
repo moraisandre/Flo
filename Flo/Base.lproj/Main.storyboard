@@ -107,7 +107,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="VSv-V0-cKd"/>
+                <tapGestureRecognizer id="VSv-V0-cKd">
+                    <connections>
+                        <action selector="counterViewTap:" destination="BYZ-38-t0r" id="8gc-ys-lIq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>

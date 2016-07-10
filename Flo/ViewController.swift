@@ -32,6 +32,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnPushButton(button: PushButtonView) {
+        
+        if isGraphViewShowing {
+            counterViewTap(nil)
+        }
+        
         if button.isAddButton {
             counterView.counter += 1
         } else {
@@ -49,8 +54,8 @@ class ViewController: UIViewController {
             UIView.transitionFromView(graphView,
                                       toView: counterView,
                                       duration: 1.0,
-                                      options: UIViewAnimationOptions.TransitionFlipFromLeft
-                                        | UIViewAnimationOptions.ShowHideTransitionViews,
+                                      options: UIViewAnimationOptions.TransitionFlipFromLeft,
+//                                        | UIViewAnimationOptions.ShowHideTransitionViews,
                                       completion:nil)
         } else {
             
@@ -58,9 +63,10 @@ class ViewController: UIViewController {
             UIView.transitionFromView(counterView,
                                       toView: graphView,
                                       duration: 1.0,
-                                      options: UIViewAnimationOptions.TransitionFlipFromRight
-                                        | UIViewAnimationOptions.ShowHideTransitionViews,
+                                      options: UIViewAnimationOptions.TransitionFlipFromRight,
+//                                        | UIViewAnimationOptions.ShowHideTransitionViews,
                                       completion: nil)
+            
         }
         isGraphViewShowing = !isGraphViewShowing
     }
