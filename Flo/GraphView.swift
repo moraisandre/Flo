@@ -14,6 +14,9 @@ import UIKit
     @IBInspectable var startColor: UIColor = UIColor.redColor()
     @IBInspectable var endColor: UIColor = UIColor.greenColor()
     
+    //Weekly sample data
+    var graphPoints:[Int] = [4, 2, 6, 4, 5, 8, 3]
+    
     override func drawRect(rect: CGRect) {
         
         let width = rect.width
@@ -48,5 +51,30 @@ import UIKit
                                     startPoint,
                                     endPoint,
                                     CGGradientDrawingOptions.DrawsAfterEndLocation)
+        
+        //calculate the x point
+        
+        let margin:CGFloat = 20.0
+        var columnXPoint = { (column:Int) -> CGFloat in
+            //Calculate gap between points
+            let spacer = (width - margin*2 - 4) /
+                CGFloat((self.graphPoints.count - 1))
+            var x:CGFloat = CGFloat(column) * spacer
+            x += margin + 2
+            return x
+        }
+        
+        // calculate the y point
+        
+        let topBorder:CGFloat = 60
+        let bottomBorder:CGFloat = 50
+        let graphHeight = height - topBorder - bottomBorder
+        let maxValue = maxElement(graphPoints)
+        var columnYPoint = { (graphPoint:Int) -> CGFloat in
+            var y:CGFloat = CGFloat(graphPoint) /
+                CGFloat(maxValue) * graphHeight
+            y = graphHeight + topBorder - y // Flip the graph
+            return y
+        }
     }
 }
