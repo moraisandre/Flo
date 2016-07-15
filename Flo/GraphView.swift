@@ -67,10 +67,10 @@ import UIKit
         let topBorder:CGFloat = 60
         let bottomBorder:CGFloat = 50
         let graphHeight = height - topBorder - bottomBorder
-        let maxValue = maxElement(graphPoints)
+        let maxValue = graphPoints.maxElement()
         let columnYPoint = { (graphPoint:Int) -> CGFloat in
             var y:CGFloat = CGFloat(graphPoint) /
-                CGFloat(maxValue) * graphHeight
+                CGFloat(maxValue!) * graphHeight
             y = graphHeight + topBorder - y // Flip the graph
             return y
         }
