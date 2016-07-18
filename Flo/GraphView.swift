@@ -99,7 +99,7 @@ import UIKit
         //Create the clipping path for the graph gradient
         
         //1 - save the state of the context (commented out for now)
-        //CGContextSaveGState(context)
+        CGContextSaveGState(context)
         
         //2 - make a copy of the path
         var clippingPath = graphPath.copy() as! UIBezierPath
@@ -121,7 +121,7 @@ import UIKit
         endPoint = CGPoint(x:margin, y:self.bounds.height)
     
         CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, CGGradientDrawingOptions.DrawsAfterEndLocation)
-        //CGContextRestoreGState(context)
+        CGContextRestoreGState(context)
         
         //draw the line on top of the clipped gradient
         graphPath.lineWidth = 2.0
@@ -138,6 +138,31 @@ import UIKit
                     size: CGSize(width: 5.0, height: 5.0)))
             circle.fill()
         }
+        
+        //Draw horizontal graph lines on the top of everything
+        var linePath = UIBezierPath()
+        
+        //top line
+        linePath.moveToPoint(CGPoint(x:margin, y: topBorder))
+        linePath.addLineToPoint(CGPoint(x: width - margin,
+            y:topBorder))
+        
+        //center line
+        linePath.moveToPoint(CGPoint(x:margin,
+            y: graphHeight/2 + topBorder))
+        linePath.addLineToPoint(CGPoint(x:width - margin,
+            y:graphHeight/2 + topBorder))
+        
+        //bottom line
+        linePath.moveToPoint(CGPoint(x:margin,
+            y:height - bottomBorder))
+        linePath.addLineToPoint(CGPoint(x:width - margin,
+            y:height - bottomBorder))
+        let color = UIColor(white: 1.0, alpha: 0.3)
+        color.setStroke()
+        
+        linePath.lineWidth = 1.0
+        linePath.stroke()
 
     }
 }
