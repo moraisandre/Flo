@@ -17,6 +17,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var graphView: GraphView!
     
+    //Label outlets
+    @IBOutlet weak var averageWaterDrunk: UILabel!
+    @IBOutlet weak var maxLabel: UILabel!
+    
     var isGraphViewShowing = false
 
     override func viewDidLoad() {
