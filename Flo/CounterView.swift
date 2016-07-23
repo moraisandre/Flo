@@ -21,6 +21,7 @@ let π:CGFloat = CGFloat(M_PI)
             }
         }
     }
+    
     @IBInspectable var outlineColor: UIColor = UIColor.blueColor()
     @IBInspectable var counterColor: UIColor = UIColor.orangeColor()
     
