@@ -53,7 +53,6 @@ let π:CGFloat = CGFloat(M_PI)
         path.stroke()
         
         //Draw the outline
-        
         //1 - first calculate the difference between the two angles
         //ensuring it is positive
         let angleDifference: CGFloat = 2 * π - startAngle + endAngle
