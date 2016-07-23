@@ -86,7 +86,6 @@ let π:CGFloat = CGFloat(M_PI)
         outlinePath.stroke()
         
         //Counter View markers
-        
         let context = UIGraphicsGetCurrentContext()
         
         //1 - save original state
