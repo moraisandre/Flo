@@ -43,7 +43,6 @@ class PushButtonView: UIButton {
             y:bounds.height/2 + 0.5))
         
         //Vertical Line
-        
         if isAddButton {
             //vertical line code moveToPoint(_:) and addLineToPoint(_:)
             //move to the start of the vertical stroke
