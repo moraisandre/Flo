@@ -11,7 +11,6 @@ import UIKit
 @IBDesignable
 
 class BackgroundView: UIView {
-    
     //1
     @IBInspectable var lightColor: UIColor = UIColor.orangeColor()
     @IBInspectable var darkColor: UIColor = UIColor.yellowColor()
