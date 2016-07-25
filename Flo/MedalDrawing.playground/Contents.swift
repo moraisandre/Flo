@@ -56,8 +56,7 @@ let gradient = CGGradientCreateWithColors(
 CGContextDrawLinearGradient(context,
                             gradient,
                             CGPointMake(40, 40),
-                            CGPointMake(100,160),
-                            0)
+                            CGPointMake(100,160),CGGradientDrawingOptions.DrawsAfterEndLocation)
 CGContextRestoreGState(context)
 
 //Create a transform
