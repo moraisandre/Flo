@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0FD4A21D46FB19008FF117 /* MedalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FD4A11D46FB19008FF117 /* MedalView.swift */; };
 		2D2A706B1D2DE93800CF8B2D /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A706A1D2DE93800CF8B2D /* CounterView.swift */; };
 		2D2A706D1D2F407300CF8B2D /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A706C1D2F407300CF8B2D /* GraphView.swift */; };
 		2D3697061D42F37D008DFB84 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3697051D42F37D008DFB84 /* BackgroundView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D0FD4A11D46FB19008FF117 /* MedalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedalView.swift; sourceTree = "<group>"; };
 		2D2A706A1D2DE93800CF8B2D /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		2D2A706C1D2F407300CF8B2D /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		2D3697051D42F37D008DFB84 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				2D2A706C1D2F407300CF8B2D /* GraphView.swift */,
 				2D3697051D42F37D008DFB84 /* BackgroundView.swift */,
 				2D3697071D44314C008DFB84 /* MedalDrawing.playground */,
+				2D0FD4A11D46FB19008FF117 /* MedalView.swift */,
 			);
 			path = Flo;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			files = (
 				2D3697061D42F37D008DFB84 /* BackgroundView.swift in Sources */,
 				2D2A706D1D2F407300CF8B2D /* GraphView.swift in Sources */,
+				2D0FD4A21D46FB19008FF117 /* MedalView.swift in Sources */,
 				2D9E98AC1D29F6C300905DE6 /* ViewController.swift in Sources */,
 				2D9E98BC1D2B4DE600905DE6 /* PushButtonView.swift in Sources */,
 				2D9E98AA1D29F6C300905DE6 /* AppDelegate.swift in Sources */,

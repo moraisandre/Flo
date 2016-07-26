@@ -24,6 +24,7 @@ UIColor.redColor().setFill()
 lowerRibbonPath.fill()
 
 //Add Shadow
+
 let shadow:UIColor = UIColor.blackColor().colorWithAlphaComponent(0.80)
 let shadowOffset = CGSizeMake(2.0, 2.0)
 let shadowBlurRadius: CGFloat = 5
@@ -32,6 +33,9 @@ CGContextSetShadowWithColor(context,
                             shadowOffset,
                             shadowBlurRadius,
                             shadow.CGColor)
+
+CGContextBeginTransparencyLayer(context, nil)
+
 
 //Clasp
 var claspPath = UIBezierPath(roundedRect:
@@ -95,6 +99,8 @@ let numberOneAttributes = [
 numberOne.drawInRect(numberOneRect,
                      withAttributes:numberOneAttributes)
 
+
+CGContextEndTransparencyLayer(context)
 
 //This code must always be at the end of the playground
 let image = UIGraphicsGetImageFromCurrentImageContext()

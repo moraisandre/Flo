@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var averageWaterDrunk: UILabel!
     @IBOutlet weak var maxLabel: UILabel!
     
+    @IBOutlet weak var medalView: MedalView!
+    
     var isGraphViewShowing = false
 
     override func viewDidLoad() {
@@ -28,6 +30,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         counterLabel.text = String(counterView.counter)
+        
+        checkTotal()
+    }
+    
+    func checkTotal() {
+        if counterView.counter >= 8 {
+            medalView.showMedal(true)
+        } else {
+            medalView.showMedal(false)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +61,7 @@ class ViewController: UIViewController {
             }
         }
         counterLabel.text = String(counterView.counter)
+        checkTotal()
     }
     
     @IBAction func counterViewTap(gesture:UITapGestureRecognizer?) {

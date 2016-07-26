@@ -55,10 +55,13 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kaU-Cd-OgE" customClass="CounterView" customModule="Flo" customModuleProvider="target">
                                         <rect key="frame" x="35" y="35" width="230" height="230"/>
                                         <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZCv-p2-k0d" customClass="MedalView" customModule="Flo" customModuleProvider="target">
+                                                <rect key="frame" x="76" y="147" width="80" height="80"/>
+                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxc-yO-kW9">
                                                 <rect key="frame" x="93" y="93" width="44" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -197,6 +200,7 @@
                         <outlet property="counterView" destination="kaU-Cd-OgE" id="Ja7-lB-X3E"/>
                         <outlet property="graphView" destination="TE1-AX-d36" id="4Oz-DU-Onc"/>
                         <outlet property="maxLabel" destination="Uv5-XU-QXy" id="g4j-wG-4f9"/>
+                        <outlet property="medalView" destination="ZCv-p2-k0d" id="5pq-p0-xRo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
