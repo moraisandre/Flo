@@ -65,7 +65,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="counterColor">
                                                 <color key="value" red="0.3411764705882353" green="0.85490196078431369" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
@@ -197,7 +197,7 @@
                         <outlet property="averageWaterDrunk" destination="Esd-Lq-B3e" id="KZI-KQ-pDY"/>
                         <outlet property="containerView" destination="6ee-tR-57H" id="xYS-RH-JOL"/>
                         <outlet property="counterLabel" destination="mxc-yO-kW9" id="3CR-mc-FJE"/>
-                        <outlet property="counterView" destination="kaU-Cd-OgE" id="Ja7-lB-X3E"/>
+                        <outlet property="counterView" destination="kaU-Cd-OgE" id="Xia-v8-rWV"/>
                         <outlet property="graphView" destination="TE1-AX-d36" id="4Oz-DU-Onc"/>
                         <outlet property="maxLabel" destination="Uv5-XU-QXy" id="g4j-wG-4f9"/>
                         <outlet property="medalView" destination="ZCv-p2-k0d" id="5pq-p0-xRo"/>

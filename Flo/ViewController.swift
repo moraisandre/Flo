@@ -24,12 +24,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var medalView: MedalView!
     
     var isGraphViewShowing = false
+    var temp: CounterView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         counterLabel.text = String(counterView.counter)
+        
+        temp = counterView
         
         checkTotal()
     }
@@ -65,6 +68,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func counterViewTap(gesture:UITapGestureRecognizer?) {
+        
+        if graphView == nil {
+            print("graphView nil")
+        }
+        
+        if counterView == nil {
+            print("counterView nil")
+        }
+        
         if (isGraphViewShowing) {
             
             //hide Graph
