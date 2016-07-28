@@ -81,7 +81,7 @@ import UIKit
         UIColor.whiteColor().setStroke()
         
         //set up the points line
-        var graphPath = UIBezierPath()
+        let graphPath = UIBezierPath()
         //go to start of line
         graphPath.moveToPoint(CGPoint(x:columnXPoint(0),
             y:columnYPoint(graphPoints[0])))
@@ -102,7 +102,7 @@ import UIKit
         CGContextSaveGState(context)
         
         //2 - make a copy of the path
-        var clippingPath = graphPath.copy() as! UIBezierPath
+        let clippingPath = graphPath.copy() as! UIBezierPath
         
         //3 - add lines to the copied path to complete the clip area
         clippingPath.addLineToPoint(CGPoint(
@@ -140,7 +140,7 @@ import UIKit
         }
         
         //Draw horizontal graph lines on the top of everything
-        var linePath = UIBezierPath()
+        let linePath = UIBezierPath()
         
         //top line
         linePath.moveToPoint(CGPoint(x:margin, y: topBorder))
